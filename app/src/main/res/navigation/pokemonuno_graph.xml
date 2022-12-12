@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/pokemonuno_graph"
+    app:startDestination="@id/pokemonUnoFragment">
+
+    <fragment
+        android:id="@+id/pokemonUnoFragment"
+        android:name="com.example.pokemonproject.PokemonUnoFragment"
+        android:label="fragment_pokemon_uno"
+        tools:layout="@layout/fragment_pokemon_uno" />
+</navigation>
