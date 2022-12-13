@@ -41,7 +41,7 @@
         android:layout_height="wrap_content"
         android:text="Siguiente"/>
     <TextView
-        android:id="@+id/cuota"
+        android:id="@+id/valido"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 </LinearLayout>

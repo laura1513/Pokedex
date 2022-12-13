@@ -20,5 +20,28 @@ public class PokemonUnoFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        binding.siguiente.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                ValidarDatos validar = new ValidarDatos();
+                String nombre = String.valueOf(binding.nombre.getText());
+                int hp = Integer.parseInt(binding.hp.getText().toString());
+                int ataque = Integer.parseInt(binding.ataque.getText().toString());
+                int defensa = Integer.parseInt(binding.defensa.getText().toString());
+                int ataqueEspecial = Integer.parseInt(binding.ataqueEspecial.getText().toString());
+                int defensaEspecial = Integer.parseInt(binding.defensaEspecial.getText().toString());
+
+                ValidarDatos.Validar datos = new ValidarDatos.Validar(nombre, hp, ataque, defensa, ataqueEspecial, defensaEspecial);
+
+                boolean valido = validar.valido(datos);
+
+                if (valido == true) {
+
+                } else {
+                    binding.valido.setText("Datos no válidos");
+                }
+            }
+        });
     }
 }
